@@ -1,0 +1,8 @@
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.RazorAssemblyInfo.cache
+C:\Users\Usuario\Documents\Projetos\E-jogos\E-jogos\obj\Debug\net5.0\E-jogos.RazorAssemblyInfo.cs
