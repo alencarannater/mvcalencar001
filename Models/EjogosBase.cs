@@ -1,20 +1,34 @@
 ﻿using System.IO;
 
-namespace E_jogos.Models
+namespace E_JOGOS.Models
 {
     public class EjogosBase
     {
-        public void CreateFolderAndFile (string path) 
+        //criar uma funcao para criar a pasta e o arquivo.
+
+
+        //string path é o parametro da funcao,que tera o caminho
+        //para analise.
+        public void CreateFolderAndFile(string path)
         {
-            string folder = path.Split('/')[0];
-            string file = path.Split('/')[1];
+            // pasta / arquivo.csv;
 
-            if(!Directory.Exists(folder))
-            Directory.CreateDirectory(folder);
+            string folder = path.Split('/')[0]; //recebe nome da pasta.
+            string file = path.Split('/')[1]; //receber o nome do arquivo.
 
-            if (!File.Exists(file))
+            //se nao existir cria a pasta.
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+
+            //se nao existir arquivo na pasta
+            if (!File.Exists(path))
+            {
                 File.Create(path);
+            }
 
         }
+
     }
 }

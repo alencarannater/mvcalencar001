@@ -1,12 +1,19 @@
-﻿using E_jogos.Interface;
+﻿using E_JOGOS.Interface;
 using System.Collections.Generic;
 using System.IO;
 
-namespace E_jogos.Models
+namespace E_JOGOS.Models
 {
+
+    // : HERANÇA -> EjogosBase
     public class Equipe : EjogosBase, IEquipe
     {
+        //CONSTRUTOR  CTOR.
+
+        //FUNCAO QUE VAI EXECUTAR/INICIAR ASSIM QUE A CLASSE FOI INSTANCIADO.
+
         private const string path = "Database/equipe.csv";
+
         public Equipe()
         {
             CreateFolderAndFile(path);
@@ -17,41 +24,56 @@ namespace E_jogos.Models
         public string Imagem { get; set; }
 
 
+        //funcao que vai preparar/converter de string para o
+        //tipo equipe.
+
+        // private string 
 
 
-
-        public void Crate(Equipe novaEquipe)
+        private string Prepare(Equipe e)
         {
-            string [] linha = { $"{novaEquipe.IdEquipe};{novaEquipe.Nome};{novaEquipe.Imagem}" };
-
-            File.AppendAllLines(path, linha);
-
+            return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
         }
 
-        public void Delete(int id)
+
+        public void Create(Equipe nova_equipe)
+        {
+            //receber um objeto de equipe.
+            //e gravar no CSV.
+            //
+
+            //  "item;item;item;";
+
+            string[] linha = { Prepare(nova_equipe) };
+
+            File.AppendAllLines(path, linha);
+        }
+
+        public void Delete(int idEquipe)
         {
             throw new System.NotImplementedException();
         }
 
         public List<Equipe> ReadAll()
         {
-            List<Equipe> equipes = new List<Equipe> ();
+            List<Equipe> equipes = new List<Equipe>();
             string[] linhas = File.ReadAllLines(path);
-            foreach (string linha in linhas) {
-                Equipe equipe = new Equipe();
-                equipe.IdEquipe = int.Parse(linha.Split(';')[0]);
-                equipe.Nome = (linha.Split(';')[1]);
-                equipe.Imagem = (linha.Split(';')[2]);
 
+            foreach (string item in linhas)
+            {
+                Equipe equipe = new Equipe();
+                equipe.IdEquipe = int.Parse(item.Split(';')[0]);
+                equipe.Nome = item.Split(';')[1];
+                equipe.Imagem = item.Split(';')[2];
 
                 equipes.Add(equipe);
             }
+
             return equipes;
+
         }
-            
 
-
-        public void Updade(Equipe equipe)
+        public void Update(Equipe equipe)
         {
             throw new System.NotImplementedException();
         }

@@ -1,16 +1,22 @@
-﻿using E_jogos.Models;
+﻿using E_JOGOS.Models;
 using System.Collections.Generic;
 
-namespace E_jogos.Interface
+namespace E_JOGOS.Interface
 {
+    /// <summary>
+    /// RESPONSÁVEL POR DETERMINAR QUAIS METODOS UMA CLASSE TERÁ
+    /// É O CONTRATO DA CLASSE.
+    /// </summary>
     public interface IEquipe
     {
-        void Crate(Equipe novaEquipe);
+        //CREATE
+        //READALL
+        //UPDATE
+        //DELETE
 
+        void Create(Equipe nova_equipe);
         List<Equipe> ReadAll();
-
-        void Updade(Equipe equipe);
-
-        void Delete (int id);
+        void Update(Equipe equipe);
+        void Delete(int idEquipe);
     }
 }
